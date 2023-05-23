@@ -1,0 +1,52 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
+    "dev:ci": "concurrently \"http-server --port 3000 --proxy http://localhost:3000? packages/app/dist\" \"yarn start-backend\"",
+    "start": "yarn workspace app start",
+    "start-backend": "yarn workspace backend start",
+    "start-backend:ci": "yarn workspace backend backstage-cli package build && node packages/backend",
+    "start:ci": "concurrently \"yarn start\" \"yarn start-backend:ci\"",
+    "build": "lerna run build",
+    "build-image": "yarn workspace backend build-image",
+    "tsc": "tsc",
+    "tsc:full": "tsc --skipLibCheck false --incremental false",
+    "clean": "backstage-cli clean && lerna run clean",
+    "diff": "lerna run diff --",
+    "test": "yarn backstage-cli repo test --workerIdleMemoryLimit=800M --coverage --runInBand",
+    "test:all": "lerna run test -- --coverage --runInBand",
+    "lint": "lerna run lint --since origin/main --",
+    "lint:all": "lerna run lint --",
+    "create-plugin": "backstage-cli create-plugin --scope ovotech --no-private",
+    "remove-plugin": "backstage-cli remove-plugin",
+    "release": "changeset version && yarn prettier --write '{plugins}/*/{package.json,CHANGELOG.md}' && yarn install",
+    "prepare": "husky install"
+  },
+  "workspaces": {
+    "packages": [
+      "plugins/**",
+      "utils/**"
+    ]
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.22.6",
+    "@spotify/prettier-config": "^14.0.0",
+    "@types/webpack": "^5.28.0",
+    "concurrently": "^7.0.0",
+    "eslint-plugin-notice": "^0.9.10",
+    "husky": "^8.0.1",
+    "lerna": "^6.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.3.2",
+    "typescript": "~4.7.0"
+  },
+  "prettier": "@spotify/prettier-config",
+  "dependencies": {
+    "@changesets/cli": "^2.18.0"
+  }
+}
