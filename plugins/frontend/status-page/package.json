@@ -2,7 +2,6 @@
   "name": "@ovotech/backstage-plugin-status-page",
   "description": "A backstage plugin for showing third party status and incidents",
   "version": "0.1.8",
-  "repository": "https://github.com/sammbetts/backstage-plugin-status-page.git",
   "engines": {
     "node": "16 || 18"
   },
