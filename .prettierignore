@@ -8,6 +8,11 @@ api-report.md
 cli-report.md
 .vscode
 dist-types
+.github/workflows/changeset.yml
+.github/workflows/main.yml
+.github/workflows/publish.yml
+global.d.ts
+
 
 # reduce the barrier for adopters to add themselves
 ADOPTERS.md

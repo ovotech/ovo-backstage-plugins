@@ -1,9 +1,0 @@
-node_modules
-.env
-.npmrc
-.npmignore
-src
-dev
-app-config.yaml
-.eslint.js
-```
