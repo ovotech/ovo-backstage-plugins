@@ -11,7 +11,7 @@ We believe everyone comes to work to do their best work - but we also recognise 
 
 ### Report bugs
 
-If you have found a bug please raise an issue [here](https://github.com/RoadieHQ/roadie-backstage-plugins/issues/new?assignees=&labels=bug&template=bug_template.md).
+If you have found a bug please raise an issue [here](https://github.com/ovotech/ovo-backstage-plugins/issues).
 
 ### Fix bugs or build new features
 
@@ -19,7 +19,7 @@ If you would like to help fix a known issue - or add a new feature to an existin
 
 ### Submit feedback
 
-We welcome feedback in everything that we do - should you wish to share please raise [an issue](https://github.com/RoadieHQ/roadie-backstage-plugins/issues/new).
+We welcome feedback in everything that we do - should you wish to share please raise [an issue](https://github.com/ovotech/ovo-backstage-plugins/issues).
 
 If you are proposing a feature:
 
@@ -69,4 +69,3 @@ After merging a changeset file to main, a subsequent pull request is created aut
 ## Thank you to the Backstage Community
 
 We have taken the examples of Backstage and RoadieHQ in how we have structured this repository, and in how we use Changesets and other build features to help build and publish our plugins.
-
