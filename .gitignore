@@ -50,6 +50,8 @@ web_modules/
 
 # Optional npm cache directory
 .npm
+.npmrc
+.prettierignore
 
 # Optional eslint cache
 .eslintcache
@@ -90,6 +92,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist-types
 
 # Gatsby files
 .cache/

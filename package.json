@@ -1,0 +1,62 @@
+{
+  "name": "root",
+  "version": "0.1.1",
+  "repository": "https://github.com/ovotech/ovo-backstage-plugins",
+  "engines": {
+    "node": "16 || 18"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
+    "start": "yarn workspace backstage-plugin-service-health-dashboard start",
+    "start-backend": "yarn workspace backstage-plugin-service-health-backend start",
+    "build": "backstage-cli repo build",
+    "build:all": "backstage-cli repo build --all",
+    "tsc": "tsc",
+    "tsc:full": "backstage-cli clean && tsc --skipLibCheck false --incremental false",
+    "lint:all": "backstage-cli repo lint",
+    "test": "backstage-cli repo test",
+    "clean": "backstage-cli repo clean",
+    "prepack": "backstage-cli repo prepack",
+    "postpack": "backstage-cli repo postpack"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "plugins/*"
+    ]
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.22.9",
+    "@backstage/core-app-api": "^1.9.0",
+    "@backstage/dev-utils": "^1.0.17",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.0",
+    "@spotify/prettier-config": "^12.0.0",
+    "concurrently": "^6.0.0",
+    "lerna": "^4.0.0",
+    "node-gyp": "^9.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "resolutions": {
+    "@types/react": "^17",
+    "@types/react-dom": "^17"
+  },
+  "packageManager": "yarn@3.2.4",
+  "prettier": "@spotify/prettier-config",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

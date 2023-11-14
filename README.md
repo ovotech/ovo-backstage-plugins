@@ -1,2 +1,2 @@
 # ovo-backstage-plugins
-Our own plugins developed for use with Backstage
+OVO owned plugins developed for use with Backstage
