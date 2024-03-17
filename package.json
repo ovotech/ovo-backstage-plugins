@@ -47,6 +47,6 @@
   },
   "prettier": "@spotify/prettier-config",
   "dependencies": {
-    "@changesets/cli": "^2.18.0"
+    "@changesets/cli": "^2.27.1"
   }
 }
