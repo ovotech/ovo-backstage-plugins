@@ -1,0 +1,11 @@
+site_name: test blah kdsgkfds
+repo_url: https://github.com/ovotech/ovotech/ovo-backstage-plugins
+edit_uri: edit/main/docs
+docs_dir: docs
+strict: true
+
+plugins:
+  - techdocs-core
+
+nav:
+  - Home: index.md
